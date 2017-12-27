@@ -13,7 +13,7 @@ matrix:
     - rust: nightly
       env: BENCHMARK=1
   allow_failures:
-    - rust: nightly
     - rust: beta
+    - rust: stable
       env: DENYWARNINGS=1
 
