@@ -1,0 +1,8 @@
+[package]
+name = "iota_lib_rust"
+version = "0.1.0"
+authors = ["hekrause <hekrause@htwg-konstanz.de>"]
+
+[dependencies]
+sha3 = "0.7.2"
+rand = "0.4.1"
