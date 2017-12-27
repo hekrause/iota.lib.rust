@@ -10,4 +10,8 @@ matrix:
   include:
     - rust: nightly
       env: BENCHMARK=1
+after_success:
+  - if [ "$TRAVIS_RUST_VERSION" == "nightly" ]; then
+        cargo bench;
+    fi
 
