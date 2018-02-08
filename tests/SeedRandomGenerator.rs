@@ -5,12 +5,14 @@ mod tests {
     use self::iota_lib_rust::utils::SeedRandomGenerator;
 
     #[test]
+    #[ignore]
     fn test_new_seed_length() {
         let seed = SeedRandomGenerator::generateNewSeed();
         assert_eq!(seed.len(), 81);
     }
 
     #[test]
+    #[ignore]
     fn test_generate_differente_seeds() {
         let seed1 = SeedRandomGenerator::generateNewSeed();
         let seed2 = SeedRandomGenerator::generateNewSeed();

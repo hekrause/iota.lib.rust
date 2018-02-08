@@ -17,5 +17,5 @@ fn test_new_address() {
     let key = signing.key(from_tryte_to_trits(seed), 0, 1);
     let digest = signing.digest(&key);
     let address_trits = signing.address(&digest);
-    let address = from_trits_to_tryte(address_trits);
+    let _address = from_trits_to_tryte(address_trits);
 }

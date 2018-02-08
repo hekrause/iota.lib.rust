@@ -6,6 +6,7 @@ mod tests {
     use self::iota_lib_rust::utils::Converter::*;
 
     #[test]
+    #[ignore]
     fn test_from_tryte_to_trits() {
         let seed = "YVYDXGHH9HD9KIFKNDSRVYFFXAQBPGPIGAFOVZNSOVWWWCCHKZAABKWU9ONWWNPVFNAQYMEJVQXQCTFJY".to_string();
         let trits = from_tryte_to_trits(seed);
@@ -14,6 +15,7 @@ mod tests {
     }
 
     #[test]
+    #[ignore]
     fn test_from_trits_to_tryte() {
         let seed = "YVYDXGHH9HD9KIFKNDSRVYFFXAQBPGPIGAFOVZNSOVWWWCCHKZAABKWU9ONWWNPVFNAQYMEJVQXQCTFJY".to_string();
         let trits = from_tryte_to_trits(seed.clone());

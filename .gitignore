@@ -10,5 +10,5 @@ Cargo.lock
 **/*.rs.bk
 
 # IntelliJ IDEA
-.idea/
+.idea
 iota.lib.rust.iml

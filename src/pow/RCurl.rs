@@ -47,7 +47,7 @@ impl TCurl for RCurl {
     }
 
     fn absorb(&mut self, trits: &Vec<i8>, mut offset: usize, length: usize) {
-        let mut len = min(length, HASH_LENGTH);
+        let mut len: usize = min(length, HASH_LENGTH);
         loop {
             self.state[0..len].clone_from_slice(&trits[offset..(offset+len)]);
             self.transform();

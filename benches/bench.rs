@@ -13,6 +13,7 @@ use iota_lib_rust::pow::TCurl::*;
 use iota_lib_rust::utils::SeedRandomGenerator;
 
 #[bench]
+#[ignore]
 fn bench_generate_new_seed(b: &mut Bencher) {
     b.iter(|| {
         SeedRandomGenerator::generateNewSeed();
@@ -20,6 +21,7 @@ fn bench_generate_new_seed(b: &mut Bencher) {
 }
 
 #[bench]
+#[ignore]
 fn bench_from_tryte_to_trits(b: &mut Bencher) {
     b.iter(|| {
         let seed = "FMLDUZJUKVORHGJLYOTFSLZWPYEIFGTSH9VOOCU9SKPNYHAPHQJJUMCRSCJECBATLMOWCXUROIPWOLSVM".to_string();
@@ -28,6 +30,7 @@ fn bench_from_tryte_to_trits(b: &mut Bencher) {
 }
 
 #[bench]
+#[ignore]
 fn bench_from_trits_to_tryte(b: &mut Bencher) {
     b.iter(|| {
         let trits = vec![1, -1, 0, 1, 1, -1, 1, -1, 0, 1, 1, 0, 0, -1, 0, 1, -1, 1, -1, 0, 1, -1, 0, 1, 0, 0, 0, -1, 0, 1, 1, 1, 0, 0, 0, 0, -1, 1, 1, 0, 0, 1, 0, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, 0, 1, 0, -1, 0, 0, -1, 1, 1, -1, 1, -1, 0, 0, -1, 1, 0, -1, 1, 0, -1, 0, 1, 0, 0, -1, 0, -1, -1, 1, 0, 1, -1, -1, 1, -1, 1, 1, -1, -1, 0, 0, 1, 1, -1, 1, 1, 0, 0, 0, -1, 1, 0, -1, -1, 1, 1, -1, -1, 0, 0, -1, -1, -1, 1, 0, -1, 0, -1, -1, 1, 1, -1, -1, -1, 0, -1, -1, 0, -1, -1, 0, 0, 1, 0, 0, 1, 0, -1, 0, 1, -1, 1, 1, -1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 1, 0, -1, 1, 1, -1, -1, 0, 0, 1, -1, 0, 0, 0, 0, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, 0, -1, -1, -1, 1, -1, -1, 1, 1, -1, 0, -1, 1, -1, -1, -1, 1, 0, 0, -1, 0, -1, 1, -1, 0, 1, 1, 1, -1, -1, 1, 1, 0, 1, 1, 1, -1, -1, 0, -1, 0, -1, 0, -1, 0, -1, 0, 1, 0, -1, 1, -1, 0, -1, 1, 1, 0, 1, 1, -1, 0];
@@ -36,6 +39,7 @@ fn bench_from_trits_to_tryte(b: &mut Bencher) {
 }
 
 #[bench]
+#[ignore]
 fn bench_generate_new_address_with_security_18(b: &mut Bencher) {
     b.iter(|| {
         let mut signing: Signing<RCurl> = Signing::new(TCurl::new(Mode::CURLP81));
