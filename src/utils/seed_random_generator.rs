@@ -1,15 +1,15 @@
 
 extern crate rand;
 
-use utils::SeedRandomGenerator::rand::distributions::IndependentSample;
-use utils::SeedRandomGenerator::rand::distributions::Range;
+use utils::seed_random_generator::rand::distributions::IndependentSample;
+use utils::seed_random_generator::rand::distributions::Range;
 
 static TRYTE_ALPHABET: [char; 27] = ['9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
-                                'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+    'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
 static SEED_LENGTH_MAX: u8 = 81;
 
-pub fn generateNewSeed() -> String {
+pub fn generate_new_seed() -> String {
     let mut builder = "".to_string();
 
     let range = Range::new(0, TRYTE_ALPHABET.len());
